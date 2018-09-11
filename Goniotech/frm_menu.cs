@@ -31,5 +31,29 @@ namespace Goniotech
         {
 
         }
+
+        private void btn_cad_paciente_Click(object sender, EventArgs e)
+        {
+            frm_paciente frm = new frm_paciente();
+            frm.Show();
+        }
+
+        private void btn_cad_fisio_Click(object sender, EventArgs e)
+        {
+            frm_fisioterapeuta frm = new frm_fisioterapeuta();
+            frm.Show();
+        }
+
+        private void pacienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_paciente frm = new frm_paciente();
+            frm.Show();
+        }
+
+        private void fisioterapeutaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_fisioterapeuta frm = new frm_fisioterapeuta();
+            frm.Show();
+        }
     }
 }
