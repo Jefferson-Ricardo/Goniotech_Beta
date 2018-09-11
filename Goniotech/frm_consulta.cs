@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Goniotech
 {
-    public partial class frm_fisioterapeuta : Form
+    public partial class frm_consulta : Form
     {
-        public frm_fisioterapeuta()
+        public frm_consulta()
         {
             InitializeComponent();
-        }
-
-        private void txt_nomePaciente_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
