@@ -165,6 +165,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\Design-80_icon-icons.com_57339.ico" />
+    <None Include="Resources\diagram-51_24466.ico" />
+    <None Include="Resources\if_Search_27877.ico" />
     <None Include="Resources\cancel.ico" />
     <None Include="Resources\delete.ico" />
     <None Include="Resources\edit.ico" />

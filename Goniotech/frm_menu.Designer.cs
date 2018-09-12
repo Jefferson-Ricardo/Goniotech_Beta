@@ -33,7 +33,9 @@
             this.pacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fisioterapeutaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.localizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gerarRelatorioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.equipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.professorWalterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.professorWalterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -92,15 +94,32 @@
             // 
             // localizarToolStripMenuItem
             // 
+            this.localizarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.buscarToolStripMenuItem});
             this.localizarToolStripMenuItem.Name = "localizarToolStripMenuItem";
             this.localizarToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.localizarToolStripMenuItem.Text = "Consultas";
             // 
+            // buscarToolStripMenuItem
+            // 
+            this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
+            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.buscarToolStripMenuItem.Text = "Buscar";
+            this.buscarToolStripMenuItem.Click += new System.EventHandler(this.buscarToolStripMenuItem_Click);
+            // 
             // relatoriosToolStripMenuItem
             // 
+            this.relatoriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gerarRelatorioToolStripMenuItem});
             this.relatoriosToolStripMenuItem.Name = "relatoriosToolStripMenuItem";
             this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.relatoriosToolStripMenuItem.Text = "Relatórios";
+            // 
+            // gerarRelatorioToolStripMenuItem
+            // 
+            this.gerarRelatorioToolStripMenuItem.Name = "gerarRelatorioToolStripMenuItem";
+            this.gerarRelatorioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gerarRelatorioToolStripMenuItem.Text = "Gerar Relatorio";
             // 
             // equipeToolStripMenuItem
             // 
@@ -217,6 +236,7 @@
             this.btn_consultar.Size = new System.Drawing.Size(201, 87);
             this.btn_consultar.TabIndex = 4;
             this.btn_consultar.UseVisualStyleBackColor = false;
+            this.btn_consultar.Click += new System.EventHandler(this.btn_consultar_Click);
             // 
             // btn_avaliar
             // 
@@ -320,6 +340,8 @@
         private System.Windows.Forms.Button btn_avaliar;
         private System.Windows.Forms.Button btn_relatorio;
         private System.Windows.Forms.Button btn_sair;
+        private System.Windows.Forms.ToolStripMenuItem buscarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gerarRelatorioToolStripMenuItem;
     }
 }
 

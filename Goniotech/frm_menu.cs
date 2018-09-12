@@ -55,5 +55,17 @@ namespace Goniotech
             frm_fisioterapeuta frm = new frm_fisioterapeuta();
             frm.Show();
         }
+
+        private void btn_consultar_Click(object sender, EventArgs e)
+        {
+            frm_consulta frm = new frm_consulta();
+            frm.Show();
+        }
+
+        private void buscarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_consulta frm = new frm_consulta();
+            frm.Show();
+        }
     }
 }
