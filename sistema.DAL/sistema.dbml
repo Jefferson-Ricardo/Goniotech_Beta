@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Goniotech" Class="sistemaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=GESTAODAINFOR11;Initial Catalog=Goniotech;Integrated Security=True" SettingsObjectName="sistema.DAL.Properties.Settings" SettingsPropertyName="GoniotechConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Aluno" Member="Alunos">
+    <Type Name="Aluno">
+      <Column Name="matricula" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idAvaliador" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Aluno_Estuda" Member="Estudas" ThisKey="matricula" OtherKey="matricula" Type="Estuda" />
+      <Association Name="Avaliador_Aluno" Member="Avaliador" ThisKey="idAvaliador" OtherKey="idAvaliador" Type="Avaliador" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sexo" Member="Sexos">
+    <Type Name="Sexo">
+      <Column Name="descricao" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="idSexo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Sexo_Paciente" Member="Pacientes" ThisKey="idSexo" OtherKey="idSexo" Type="Paciente" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Area" Member="Areas">
+    <Type Name="Area">
+      <Column Name="idArea" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="descricaoArea" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="Area_Possui" Member="Possuis" ThisKey="idArea" OtherKey="idArea" Type="Possui" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Atende" Member="Atendes">
+    <Type Name="Atende">
+      <Column Name="idAvaliador" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idPaciente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Avaliador_Atende" Member="Avaliador" ThisKey="idAvaliador" OtherKey="idAvaliador" Type="Avaliador" IsForeignKey="true" />
+      <Association Name="Paciente_Atende" Member="Paciente" ThisKey="idPaciente" OtherKey="idPaciente" Type="Paciente" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Avaliacao" Member="Avaliacaos">
+    <Type Name="Avaliacao">
+      <Column Name="idAvaliacao" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idAvaliador" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idPaciente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idSexo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dtAvaliacao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Avaliacao_Cotovelo" Member="Cotovelos" ThisKey="idAvaliacao" OtherKey="idAvaliacao" Type="Cotovelo" />
+      <Association Name="Avaliacao_Ombro" Member="Ombros" ThisKey="idAvaliacao" OtherKey="idAvaliacao" Type="Ombro" />
+      <Association Name="Avaliacao_Paciente" Member="Pacientes" ThisKey="idAvaliacao" OtherKey="idAvaliacao" Type="Paciente" />
+      <Association Name="Avaliacao_Punho" Member="Punhos" ThisKey="idAvaliacao" OtherKey="idAvaliacao" Type="Punho" />
+      <Association Name="Paciente_Avaliacao" Member="Paciente" ThisKey="idAvaliador" OtherKey="idPaciente" Type="Paciente" IsForeignKey="true" />
+      <Association Name="Paciente_Avaliacao1" Member="Paciente1" ThisKey="idPaciente" OtherKey="idPaciente" Type="Paciente" IsForeignKey="true" />
+      <Association Name="Paciente_Avaliacao2" Member="Paciente2" ThisKey="idSexo" OtherKey="idPaciente" Type="Paciente" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Avaliador" Member="Avaliadors">
+    <Type Name="Avaliador">
+      <Column Name="idAvaliador" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nomeAvaliador" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="Avaliador_Aluno" Member="Alunos" ThisKey="idAvaliador" OtherKey="idAvaliador" Type="Aluno" />
+      <Association Name="Avaliador_Atende" Member="Atendes" ThisKey="idAvaliador" OtherKey="idAvaliador" Type="Atende" />
+      <Association Name="Avaliador_Fisioterapeuta" Member="Fisioterapeutas" ThisKey="idAvaliador" OtherKey="idAvaliador" Type="Fisioterapeuta" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cotovelo" Member="Cotovelos">
+    <Type Name="Cotovelo">
+      <Column Name="idCotovelo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idAvaliacao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="flexao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="extensao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Avaliacao_Cotovelo" Member="Avaliacao" ThisKey="idAvaliacao" OtherKey="idAvaliacao" Type="Avaliacao" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Disciplina" Member="Disciplinas">
+    <Type Name="Disciplina">
+      <Column Name="idDisciplina" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nomeDisciplina" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="Disciplina_Estuda" Member="Estudas" ThisKey="idDisciplina" OtherKey="idDisciplina" Type="Estuda" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Estuda" Member="Estudas">
+    <Type Name="Estuda">
+      <Column Name="idDisciplina" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="matricula" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Disciplina_Estuda" Member="Disciplina" ThisKey="idDisciplina" OtherKey="idDisciplina" Type="Disciplina" IsForeignKey="true" />
+      <Association Name="Aluno_Estuda" Member="Aluno" ThisKey="matricula" OtherKey="matricula" Type="Aluno" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Fisioterapeuta" Member="Fisioterapeutas">
+    <Type Name="Fisioterapeuta">
+      <Column Name="crefito" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idAvaliador" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Fisioterapeuta_Possui" Member="Possuis" ThisKey="crefito" OtherKey="crefito" Type="Possui" />
+      <Association Name="Avaliador_Fisioterapeuta" Member="Avaliador" ThisKey="idAvaliador" OtherKey="idAvaliador" Type="Avaliador" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ombro" Member="Ombros">
+    <Type Name="Ombro">
+      <Column Name="idOmbro" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idAvaliacao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="flexao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="extensao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="aducao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="abducao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="aducaoHorizontal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="abducaoHorizontal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rotacaoMedial" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="rotacaoLateral" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Avaliacao_Ombro" Member="Avaliacao" ThisKey="idAvaliacao" OtherKey="idAvaliacao" Type="Avaliacao" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Paciente" Member="Pacientes">
+    <Type Name="Paciente">
+      <Column Name="idPaciente" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idAvaliacao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idSexo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nomePaciente" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="dtNasc" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="obs" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Association Name="Paciente_Atende" Member="Atendes" ThisKey="idPaciente" OtherKey="idPaciente" Type="Atende" />
+      <Association Name="Paciente_Avaliacao" Member="Avaliacaos" ThisKey="idPaciente" OtherKey="idAvaliador" Type="Avaliacao" />
+      <Association Name="Paciente_Avaliacao1" Member="Avaliacaos1" ThisKey="idPaciente" OtherKey="idPaciente" Type="Avaliacao" />
+      <Association Name="Paciente_Avaliacao2" Member="Avaliacaos2" ThisKey="idPaciente" OtherKey="idSexo" Type="Avaliacao" />
+      <Association Name="Avaliacao_Paciente" Member="Avaliacao" ThisKey="idAvaliacao" OtherKey="idAvaliacao" Type="Avaliacao" IsForeignKey="true" />
+      <Association Name="Sexo_Paciente" Member="Sexo" ThisKey="idSexo" OtherKey="idSexo" Type="Sexo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Possui" Member="Possuis">
+    <Type Name="Possui">
+      <Column Name="crefito" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idArea" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Fisioterapeuta_Possui" Member="Fisioterapeuta" ThisKey="crefito" OtherKey="crefito" Type="Fisioterapeuta" IsForeignKey="true" />
+      <Association Name="Area_Possui" Member="Area" ThisKey="idArea" OtherKey="idArea" Type="Area" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Punho" Member="Punhos">
+    <Type Name="Punho">
+      <Column Name="idPunho" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idAvaliacao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="flexao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="extensao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="desvioUlnar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="desvioRadial" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Avaliacao_Punho" Member="Avaliacao" ThisKey="idAvaliacao" OtherKey="idAvaliacao" Type="Avaliacao" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
