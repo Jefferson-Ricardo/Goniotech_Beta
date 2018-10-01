@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label label5;
             this.label1 = new System.Windows.Forms.Label();
@@ -47,9 +48,16 @@
             this.btn_editar = new System.Windows.Forms.Button();
             this.btn_novo = new System.Windows.Forms.Button();
             this.list_avaliacoes = new System.Windows.Forms.TextBox();
+            this.pacienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pacienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.nomePacienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtNascDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             label3 = new System.Windows.Forms.Label();
             label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacienteBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -167,7 +175,13 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nomePacienteDataGridViewTextBoxColumn,
+            this.dtNascDataGridViewTextBoxColumn,
+            this.sexoDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.pacienteBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(12, 248);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -242,6 +256,38 @@
             this.list_avaliacoes.Size = new System.Drawing.Size(665, 20);
             this.list_avaliacoes.TabIndex = 18;
             // 
+            // pacienteBindingSource
+            // 
+            this.pacienteBindingSource.DataSource = typeof(sistema.DAL.Paciente);
+            // 
+            // pacienteBindingSource1
+            // 
+            this.pacienteBindingSource1.DataSource = typeof(sistema.DAL.Paciente);
+            // 
+            // nomePacienteDataGridViewTextBoxColumn
+            // 
+            this.nomePacienteDataGridViewTextBoxColumn.DataPropertyName = "nomePaciente";
+            this.nomePacienteDataGridViewTextBoxColumn.HeaderText = "Paciente";
+            this.nomePacienteDataGridViewTextBoxColumn.Name = "nomePacienteDataGridViewTextBoxColumn";
+            this.nomePacienteDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomePacienteDataGridViewTextBoxColumn.Width = 385;
+            // 
+            // dtNascDataGridViewTextBoxColumn
+            // 
+            this.dtNascDataGridViewTextBoxColumn.DataPropertyName = "dtNasc";
+            this.dtNascDataGridViewTextBoxColumn.HeaderText = "Data de Nascimento";
+            this.dtNascDataGridViewTextBoxColumn.Name = "dtNascDataGridViewTextBoxColumn";
+            this.dtNascDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dtNascDataGridViewTextBoxColumn.Width = 180;
+            // 
+            // sexoDataGridViewTextBoxColumn
+            // 
+            this.sexoDataGridViewTextBoxColumn.DataPropertyName = "Sexo";
+            this.sexoDataGridViewTextBoxColumn.HeaderText = "Sexo";
+            this.sexoDataGridViewTextBoxColumn.Name = "sexoDataGridViewTextBoxColumn";
+            this.sexoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sexoDataGridViewTextBoxColumn.Width = 120;
+            // 
             // frm_paciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,6 +317,8 @@
             this.Text = "Cadastrar Paciente";
             this.Load += new System.EventHandler(this.frm_paciente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pacienteBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,5 +343,10 @@
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox list_avaliacoes;
+        private System.Windows.Forms.BindingSource pacienteBindingSource1;
+        private System.Windows.Forms.BindingSource pacienteBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomePacienteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dtNascDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sexoDataGridViewTextBoxColumn;
     }
 }

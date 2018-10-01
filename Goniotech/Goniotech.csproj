@@ -113,6 +113,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\DataSources\frm_fisioterapeuta.datasource" />
+    <None Include="Properties\DataSources\sistema.DAL.Paciente.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
