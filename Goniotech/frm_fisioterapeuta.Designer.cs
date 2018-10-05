@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label label3;
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_cancelar = new System.Windows.Forms.Button();
@@ -39,15 +40,30 @@
             this.txt_nomePaciente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cb_especialidade = new System.Windows.Forms.ComboBox();
+            this.frmfisioterapeutaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frmfisioterapeutaBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            label3.Location = new System.Drawing.Point(317, 11);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(94, 13);
+            label3.TabIndex = 23;
+            label3.Text = "Registro/Matricula";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 38);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(727, 260);
             this.dataGridView1.TabIndex = 36;
             // 
@@ -127,16 +143,6 @@
             this.txt_dtNasc.Size = new System.Drawing.Size(107, 20);
             this.txt_dtNasc.TabIndex = 24;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            label3.Location = new System.Drawing.Point(317, 11);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(94, 13);
-            label3.TabIndex = 23;
-            label3.Text = "Registro/Matricula";
-            // 
             // txt_nomePaciente
             // 
             this.txt_nomePaciente.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -163,6 +169,10 @@
             this.cb_especialidade.Size = new System.Drawing.Size(136, 21);
             this.cb_especialidade.TabIndex = 30;
             // 
+            // frmfisioterapeutaBindingSource
+            // 
+            this.frmfisioterapeutaBindingSource.DataSource = typeof(Goniotech.frm_fisioterapeuta);
+            // 
             // frm_fisioterapeuta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,6 +193,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar Fisioterapeuta";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frmfisioterapeutaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,5 +211,6 @@
         private System.Windows.Forms.TextBox txt_nomePaciente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cb_especialidade;
+        private System.Windows.Forms.BindingSource frmfisioterapeutaBindingSource;
     }
 }

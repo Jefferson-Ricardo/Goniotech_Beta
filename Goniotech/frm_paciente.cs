@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using sistema.DAL;
 
 namespace Goniotech
 {
@@ -20,6 +21,11 @@ namespace Goniotech
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frm_paciente_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
