@@ -33,7 +33,9 @@
             this.pacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fisioterapeutaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.localizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.localizarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.relatoriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gerarRelatorioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.equipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.professorWalterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.professorWalterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,15 +43,40 @@
             this.professoraLucianaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.coOrientedorRodrigoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alunoJeffersonRicardoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_cad_paciente = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_cad_fisio = new System.Windows.Forms.Button();
-            this.btn_consultar = new System.Windows.Forms.Button();
-            this.btn_avaliar = new System.Windows.Forms.Button();
-            this.btn_relatorio = new System.Windows.Forms.Button();
-            this.btn_sair = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Ombro = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
             this.menu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.Ombro.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu
@@ -63,7 +90,7 @@
             this.equipeToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(784, 24);
+            this.menu.Size = new System.Drawing.Size(1350, 24);
             this.menu.TabIndex = 1;
             this.menu.Text = "menuStrip1";
             // 
@@ -79,28 +106,45 @@
             // pacienteToolStripMenuItem
             // 
             this.pacienteToolStripMenuItem.Name = "pacienteToolStripMenuItem";
-            this.pacienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pacienteToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.pacienteToolStripMenuItem.Text = "Paciente";
             this.pacienteToolStripMenuItem.Click += new System.EventHandler(this.pacienteToolStripMenuItem_Click);
             // 
             // fisioterapeutaToolStripMenuItem
             // 
             this.fisioterapeutaToolStripMenuItem.Name = "fisioterapeutaToolStripMenuItem";
-            this.fisioterapeutaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.fisioterapeutaToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.fisioterapeutaToolStripMenuItem.Text = "Fisioterapeuta";
             this.fisioterapeutaToolStripMenuItem.Click += new System.EventHandler(this.fisioterapeutaToolStripMenuItem_Click);
             // 
             // localizarToolStripMenuItem
             // 
+            this.localizarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.localizarToolStripMenuItem1});
             this.localizarToolStripMenuItem.Name = "localizarToolStripMenuItem";
             this.localizarToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.localizarToolStripMenuItem.Text = "Consultas";
             // 
+            // localizarToolStripMenuItem1
+            // 
+            this.localizarToolStripMenuItem1.Name = "localizarToolStripMenuItem1";
+            this.localizarToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
+            this.localizarToolStripMenuItem1.Text = "Localizar";
+            this.localizarToolStripMenuItem1.Click += new System.EventHandler(this.localizarToolStripMenuItem1_Click);
+            // 
             // relatoriosToolStripMenuItem
             // 
+            this.relatoriosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gerarRelatorioToolStripMenuItem});
             this.relatoriosToolStripMenuItem.Name = "relatoriosToolStripMenuItem";
             this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.relatoriosToolStripMenuItem.Text = "Relatórios";
+            // 
+            // gerarRelatorioToolStripMenuItem
+            // 
+            this.gerarRelatorioToolStripMenuItem.Name = "gerarRelatorioToolStripMenuItem";
+            this.gerarRelatorioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.gerarRelatorioToolStripMenuItem.Text = "Gerar Relatorio";
             // 
             // equipeToolStripMenuItem
             // 
@@ -154,153 +198,332 @@
             this.alunoJeffersonRicardoToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.alunoJeffersonRicardoToolStripMenuItem.Text = "Aluno Jefferson Ricardo";
             // 
-            // btn_cad_paciente
+            // button1
             // 
-            this.btn_cad_paciente.BackColor = System.Drawing.Color.Transparent;
-            this.btn_cad_paciente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_cad_paciente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cad_paciente.FlatAppearance.BorderSize = 0;
-            this.btn_cad_paciente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_cad_paciente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_cad_paciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cad_paciente.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_cad_paciente.Image = global::Goniotech.Properties.Resources.btn_cadastrarPaciente2;
-            this.btn_cad_paciente.Location = new System.Drawing.Point(368, 41);
-            this.btn_cad_paciente.Name = "btn_cad_paciente";
-            this.btn_cad_paciente.Size = new System.Drawing.Size(201, 87);
-            this.btn_cad_paciente.TabIndex = 2;
-            this.btn_cad_paciente.UseVisualStyleBackColor = false;
-            this.btn_cad_paciente.Click += new System.EventHandler(this.btn_cad_paciente_Click);
+            this.button1.Location = new System.Drawing.Point(715, 37);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(623, 577);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // button2
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Goniotech.Properties.Resources.Logo3;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 41);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(356, 351);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.button2.Location = new System.Drawing.Point(1138, 628);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(199, 71);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // btn_cad_fisio
+            // Ombro
             // 
-            this.btn_cad_fisio.BackColor = System.Drawing.Color.Transparent;
-            this.btn_cad_fisio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_cad_fisio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cad_fisio.FlatAppearance.BorderSize = 0;
-            this.btn_cad_fisio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_cad_fisio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_cad_fisio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cad_fisio.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_cad_fisio.Image = global::Goniotech.Properties.Resources.btn_cadastrarFisio2;
-            this.btn_cad_fisio.Location = new System.Drawing.Point(571, 41);
-            this.btn_cad_fisio.Name = "btn_cad_fisio";
-            this.btn_cad_fisio.Size = new System.Drawing.Size(201, 87);
-            this.btn_cad_fisio.TabIndex = 3;
-            this.btn_cad_fisio.UseVisualStyleBackColor = false;
-            this.btn_cad_fisio.Click += new System.EventHandler(this.btn_cad_fisio_Click);
+            this.Ombro.Controls.Add(this.tabPage1);
+            this.Ombro.Controls.Add(this.tabPage2);
+            this.Ombro.Controls.Add(this.tabPage3);
+            this.Ombro.Location = new System.Drawing.Point(12, 314);
+            this.Ombro.Name = "Ombro";
+            this.Ombro.SelectedIndex = 0;
+            this.Ombro.Size = new System.Drawing.Size(687, 385);
+            this.Ombro.TabIndex = 12;
             // 
-            // btn_consultar
+            // tabPage1
             // 
-            this.btn_consultar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_consultar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_consultar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_consultar.FlatAppearance.BorderSize = 0;
-            this.btn_consultar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_consultar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_consultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_consultar.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_consultar.Image = global::Goniotech.Properties.Resources.btn_consultar;
-            this.btn_consultar.Location = new System.Drawing.Point(368, 175);
-            this.btn_consultar.Name = "btn_consultar";
-            this.btn_consultar.Size = new System.Drawing.Size(201, 87);
-            this.btn_consultar.TabIndex = 4;
-            this.btn_consultar.UseVisualStyleBackColor = false;
+            this.tabPage1.Controls.Add(this.textBox10);
+            this.tabPage1.Controls.Add(this.textBox9);
+            this.tabPage1.Controls.Add(this.textBox8);
+            this.tabPage1.Controls.Add(this.textBox7);
+            this.tabPage1.Controls.Add(this.textBox6);
+            this.tabPage1.Controls.Add(this.textBox5);
+            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.label9);
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(679, 359);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Ombro";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // btn_avaliar
+            // tabPage2
             // 
-            this.btn_avaliar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_avaliar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_avaliar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_avaliar.FlatAppearance.BorderSize = 0;
-            this.btn_avaliar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_avaliar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_avaliar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_avaliar.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_avaliar.Image = global::Goniotech.Properties.Resources.btn_avaliar;
-            this.btn_avaliar.Location = new System.Drawing.Point(368, 305);
-            this.btn_avaliar.Name = "btn_avaliar";
-            this.btn_avaliar.Size = new System.Drawing.Size(201, 87);
-            this.btn_avaliar.TabIndex = 5;
-            this.btn_avaliar.UseVisualStyleBackColor = false;
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(679, 359);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Cotovelo";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btn_relatorio
+            // label1
             // 
-            this.btn_relatorio.BackColor = System.Drawing.Color.Transparent;
-            this.btn_relatorio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_relatorio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_relatorio.FlatAppearance.BorderSize = 0;
-            this.btn_relatorio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_relatorio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_relatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_relatorio.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_relatorio.Image = global::Goniotech.Properties.Resources.btn_relatorio;
-            this.btn_relatorio.Location = new System.Drawing.Point(571, 175);
-            this.btn_relatorio.Name = "btn_relatorio";
-            this.btn_relatorio.Size = new System.Drawing.Size(201, 87);
-            this.btn_relatorio.TabIndex = 6;
-            this.btn_relatorio.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Nome:";
             // 
-            // btn_sair
+            // textBox1
             // 
-            this.btn_sair.BackColor = System.Drawing.Color.Transparent;
-            this.btn_sair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_sair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_sair.FlatAppearance.BorderSize = 0;
-            this.btn_sair.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_sair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_sair.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_sair.Image = global::Goniotech.Properties.Resources.btn_sair;
-            this.btn_sair.Location = new System.Drawing.Point(575, 305);
-            this.btn_sair.Name = "btn_sair";
-            this.btn_sair.Size = new System.Drawing.Size(201, 87);
-            this.btn_sair.TabIndex = 7;
-            this.btn_sair.UseVisualStyleBackColor = false;
+            this.textBox1.BackColor = System.Drawing.Color.LightGreen;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(56, 37);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(358, 20);
+            this.textBox1.TabIndex = 14;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 71);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(126, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Data de Nascimento:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.LightGreen;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Location = new System.Drawing.Point(140, 67);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(110, 20);
+            this.textBox2.TabIndex = 16;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(256, 71);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Área:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.LightGreen;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Location = new System.Drawing.Point(294, 68);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(120, 20);
+            this.textBox3.TabIndex = 18;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 97);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(85, 13);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Observações:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.LightGreen;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox4.Location = new System.Drawing.Point(16, 113);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(398, 195);
+            this.textBox4.TabIndex = 20;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(679, 359);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Punho";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(925, 628);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(199, 71);
+            this.button3.TabIndex = 21;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(715, 628);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(199, 71);
+            this.button4.TabIndex = 22;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(429, 37);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(270, 271);
+            this.button5.TabIndex = 23;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(138, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Direito";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(354, 22);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Esquerdo";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(17, 56);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 13);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Flexão";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(17, 104);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(59, 13);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Extensão";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(15, 296);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(98, 13);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Rotação Lateral";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(17, 248);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(96, 13);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Rotação Medial";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(17, 200);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(57, 13);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Abdução";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(17, 152);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(50, 13);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Adução";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(20, 72);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(104, 20);
+            this.textBox5.TabIndex = 8;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(20, 120);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(104, 20);
+            this.textBox6.TabIndex = 9;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(20, 168);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(104, 20);
+            this.textBox7.TabIndex = 10;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(20, 216);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(104, 20);
+            this.textBox8.TabIndex = 11;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(20, 266);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(104, 20);
+            this.textBox9.TabIndex = 12;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(20, 316);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(104, 20);
+            this.textBox10.TabIndex = 13;
             // 
             // frm_principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.ForestGreen;
-            this.BackgroundImage = global::Goniotech.Properties.Resources.bg;
-            this.ClientSize = new System.Drawing.Size(784, 411);
-            this.Controls.Add(this.btn_sair);
-            this.Controls.Add(this.btn_relatorio);
-            this.Controls.Add(this.btn_avaliar);
-            this.Controls.Add(this.btn_consultar);
-            this.Controls.Add(this.btn_cad_fisio);
-            this.Controls.Add(this.btn_cad_paciente);
-            this.Controls.Add(this.pictureBox1);
+            this.BackColor = System.Drawing.Color.LightGreen;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1350, 711);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Ombro);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.menu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menu;
             this.Name = "frm_principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Goniotech";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_principal_Load);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Ombro.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MenuStrip menu;
         private System.Windows.Forms.ToolStripMenuItem cadastrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pacienteToolStripMenuItem;
@@ -314,12 +537,39 @@
         private System.Windows.Forms.ToolStripMenuItem professoraLucianaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem coOrientedorRodrigoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alunoJeffersonRicardoToolStripMenuItem;
-        private System.Windows.Forms.Button btn_cad_paciente;
-        private System.Windows.Forms.Button btn_cad_fisio;
-        private System.Windows.Forms.Button btn_consultar;
-        private System.Windows.Forms.Button btn_avaliar;
-        private System.Windows.Forms.Button btn_relatorio;
-        private System.Windows.Forms.Button btn_sair;
+        private System.Windows.Forms.ToolStripMenuItem localizarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem gerarRelatorioToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TabControl Ombro;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
     }
 }
 

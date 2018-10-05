@@ -165,6 +165,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\3440910-ecommerce-find-magnifier-search-seo_107523.ico" />
     <None Include="Resources\cancel.ico" />
     <None Include="Resources\delete.ico" />
     <None Include="Resources\edit.ico" />
